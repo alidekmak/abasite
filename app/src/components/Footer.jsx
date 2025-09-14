@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -37,10 +38,10 @@ function Footer() {
           <div>
             <h4 style={{color: '#F5B895', marginBottom: '1rem'}}>Quick Links</h4>
             <ul style={{listStyle: 'none', padding: 0}}>
-              <li style={{marginBottom: '0.5rem'}}><a href="/services" style={{color: 'white', textDecoration: 'none'}}>Services</a></li>
-              <li style={{marginBottom: '0.5rem'}}><a href="/about" style={{color: 'white', textDecoration: 'none'}}>About Us</a></li>
-              <li style={{marginBottom: '0.5rem'}}><a href="/career" style={{color: 'white', textDecoration: 'none'}}>Careers</a></li>
-              <li style={{marginBottom: '0.5rem'}}><a href="/contact" style={{color: 'white', textDecoration: 'none'}}>Contact</a></li>
+              <li style={{marginBottom: '0.5rem'}}><Link to="/services" style={{color: 'white', textDecoration: 'none'}}>Services</Link></li>
+              <li style={{marginBottom: '0.5rem'}}><Link to="/about" style={{color: 'white', textDecoration: 'none'}}>About Us</Link></li>
+              <li style={{marginBottom: '0.5rem'}}><Link to="/career" style={{color: 'white', textDecoration: 'none'}}>Careers</Link></li>
+              <li style={{marginBottom: '0.5rem'}}><Link to="/contact" style={{color: 'white', textDecoration: 'none'}}>Contact</Link></li>
             </ul>
           </div>
           

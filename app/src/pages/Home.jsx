@@ -131,7 +131,7 @@ function Home() {
           right: '8%',
           width: '160px',
           height: '120px',
-          backgroundImage: 'url("/office/office1.jpg")',
+          backgroundImage: 'url("/office/office3.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           borderRadius: '12px',
