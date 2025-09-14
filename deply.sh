@@ -3,6 +3,6 @@ cd ./app
 npm run build
 rsync -avz ./dist/ root@138.197.131.6:/var/www/abasite
 
-rsync -avz ../server/ root@138.197.131.6:/server
+#rsync -avz ../server/ root@138.197.131.6:/server
 
 #Password: NurtureNest
