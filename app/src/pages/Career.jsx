@@ -106,14 +106,26 @@ function Career() {
               }}>
                 At Nurture Nest, we believe that great therapy starts with great therapists. We're committed to creating an environment where our team can thrive professionally while making a real difference in children's lives.
               </p>
+              
+              {/* Team Photo */}
+              <div style={{
+                width: '100%',
+                height: '300px',
+                backgroundImage: 'url("/office/office5.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                borderRadius: '12px',
+                boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
+              }}></div>
             </div>
             <div style={{
-              backgroundColor: 'var(--color-cream)',
+              backgroundColor: 'var(--color-white)',
               padding: '3rem',
-              borderRadius: '12px'
+              borderRadius: '12px',
+              boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
             }}>
               <h3 style={{
-                color: 'var(--color-terracotta)',
+                color: 'var(--color-sage)',
                 marginBottom: '1.5rem',
                 fontSize: '1.5rem'
               }}>

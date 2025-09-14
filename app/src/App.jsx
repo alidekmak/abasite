@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Services from './pages/Services';
-import Students from './pages/Students';
 import Career from './pages/Career';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -29,7 +28,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/students" element={<Students />} />
             <Route path="/career" element={<Career />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

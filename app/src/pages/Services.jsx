@@ -4,34 +4,40 @@ import { Link } from 'react-router-dom';
 function Services() {
   const services = [
     {
-      name: 'ABA Therapy',
-      description: 'Applied Behavior Analysis therapy uses evidence-based techniques to help children develop essential life skills, reduce challenging behaviors, and increase positive behaviors.',
-      benefits: ['Social skills development', 'Communication improvement', 'Behavioral intervention', 'Life skills training']
+      name: 'Center Based ABA Services',
+      description: 'At our thoughtfully designed center in Dearborn, Michigan, our skilled Behavior Technicians and Board-Certified Behavior Analysts deliver individualized ABA Therapy in a naturalistic yet structured environment. The center provides a safe space for children to develop and strengthen communication, social, and play skills, while also focusing on behavior reduction strategies tailored to each child\'s needs. Center-based services support peer interaction, group learning, and the generalization of skills beyond the home setting—helping children thrive across multiple environments.',
+      benefits: ['Peer interaction opportunities', 'Group learning experiences', 'Skill generalization', 'Structured environment', 'BCBA supervision', 'Individualized programs'],
+      icon: '/services/CenterBased ABA.png'
     },
     {
-      name: 'Speech Language Pathology',
-      description: 'Our speech-language pathologists help children develop communication skills, language comprehension, and social communication abilities.',
-      benefits: ['Language development', 'Communication skills', 'Social interaction', 'Comprehension improvement']
+      name: 'In-Home ABA Services',
+      description: 'Our dedicated Behavior Technicians and Board-Certified Behavior Analysts provide high-quality ABA Therapy in the comfort and familiarity of your home. This personalized approach allows children to work on meaningful goals in a natural, comfortable, and trusted environment—supporting skill development in communication, social interaction, daily routines, and behavior management. In-home therapy also promotes greater consistency and collaboration with caregivers, helping to create lasting, real-world progress.',
+      benefits: ['Natural environment learning', 'Family collaboration', 'Comfortable setting', 'Real-world application', 'Caregiver involvement', 'Personalized approach'],
+      icon: '/services/home.png'
+    },
+    {
+      name: 'Parent Training',
+      description: 'We offer parent training sessions led by a Board-Certified Behavior Analyst (BCBA), available both in-person and online. Our Parent Training Services are designed to empower families with the tools and knowledge to support their child\'s progress beyond therapy sessions. We focus on practical strategies for understanding behavior, building skills, and strengthening the parent-child connection. By learning how to implement ABA techniques at home and in the community, parents become confident partners in their child\'s growth and long-term success.',
+      benefits: ['BCBA-led training', 'In-person and online options', 'Practical strategies', 'Home implementation', 'Parent empowerment', 'Ongoing support'],
+      icon: '/services/parent-training.png'
+    },
+    {
+      name: 'Community Outings',
+      description: 'Our community outings offer fun, real-world learning experiences where children can practice important life skills in a supportive setting. Guided by our trained staff, these outings help children work on goals like waiting, following directions, transitioning between activities, and socializing with peers. At the same time, families have the opportunity to connect, share experiences, and enjoy time together in a welcoming environment that fosters both learning and community.',
+      benefits: ['Real-world skill practice', 'Social interaction', 'Community integration', 'Family connection', 'Supervised learning', 'Fun experiences'],
+      icon: '/services/community.png'
     },
     {
       name: 'Speech Therapy',
-      description: 'Focused therapy to improve speech clarity, fluency, and articulation, helping children express themselves more effectively.',
-      benefits: ['Speech clarity', 'Fluency improvement', 'Articulation training', 'Confidence building']
+      description: 'Through our partnership with Simpli Speech, we offer on-site Speech Therapy services designed to help children strengthen their communication skills in a familiar and supportive environment. By working closely with Simpli Speech therapists, we ensure that each child\'s goals are aligned, and progress is made in speech, language, and social communication.',
+      benefits: ['Partnership with Simpli Speech', 'On-site services', 'Communication development', 'Goal alignment', 'Familiar environment', 'Collaborative approach'],
+      icon: '/services/simplespeech.png'
     },
     {
       name: 'Occupational Therapy',
-      description: 'Helping children develop fine motor skills, sensory processing abilities, and daily living skills for greater independence.',
-      benefits: ['Fine motor skills', 'Sensory processing', 'Daily living skills', 'Independence building']
-    },
-    {
-      name: 'Early On',
-      description: 'Early intervention services for infants and toddlers, providing crucial support during the most formative years.',
-      benefits: ['Early intervention', 'Developmental support', 'Family guidance', 'Milestone achievement']
-    },
-    {
-      name: 'Telehealth',
-      description: 'Remote therapy sessions that bring our services directly to your home, providing flexibility and continuity of care.',
-      benefits: ['Convenient access', 'Home environment', 'Flexible scheduling', 'Continuous care']
+      description: 'We\'ve partnered with Motivate Children\'s Therapy to bring on-site occupational therapy (OT) services directly to your child- right where they\'re most comfortable. Through a collaborative, goal-driven approach, we support your child\'s growth in daily living, feeding, fine motor skills, and sensory integration, all within a familiar environment that encourages real progress.',
+      benefits: ['Partnership with Motivate Children\'s Therapy', 'On-site OT services', 'Daily living skills', 'Fine motor development', 'Sensory integration', 'Familiar setting'],
+      icon: '/services/childrensmotivatetherapy.png'
     }
   ];
 
@@ -52,7 +58,7 @@ function Services() {
             color: 'white',
             fontWeight: '700'
           }}>
-            Our Comprehensive Services
+            Comprehensive Services
           </h1>
           <p style={{
             fontSize: '1.3rem', 
@@ -69,7 +75,7 @@ function Services() {
       {/* Services Grid */}
       <section style={{
         padding: '80px 0',
-        backgroundColor: 'var(--color-cream)',
+        backgroundColor: 'white',
         width: '100%'
       }}>
         <div className="container-content">
@@ -82,14 +88,30 @@ function Services() {
                 boxShadow: '0 8px 30px rgba(0,0,0,0.1)',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease'
               }}>
-                <h2 style={{
-                  color: 'var(--color-forest-green)', 
-                  marginBottom: '1.5rem', 
-                  fontSize: '2rem',
-                  fontWeight: '600'
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '1.5rem'
                 }}>
-                  {service.name}
-                </h2>
+                  <img 
+                    src={service.icon} 
+                    alt={`${service.name} icon`}
+                    style={{
+                      width: '50px',
+                      height: '50px',
+                      objectFit: 'contain',
+                      marginRight: '1rem'
+                    }}
+                  />
+                  <h2 style={{
+                    color: 'var(--color-forest-green)', 
+                    fontSize: '2rem',
+                    fontWeight: '600',
+                    margin: 0
+                  }}>
+                    {service.name}
+                  </h2>
+                </div>
                 <p style={{
                   fontSize: '1.1rem',
                   lineHeight: '1.7',
@@ -132,6 +154,52 @@ function Services() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Success Stories Image Section */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '4rem',
+            alignItems: 'center',
+            margin: '4rem 0'
+          }}>
+            <div style={{
+              width: '100%',
+              height: '400px',
+              backgroundImage: 'url("/thekids/thekids5.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              borderRadius: '12px',
+              boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
+            }}></div>
+            <div>
+              <h3 style={{
+                fontSize: '2.2rem',
+                marginBottom: '1.5rem',
+                color: 'var(--color-forest-green)',
+                fontWeight: '600'
+              }}>
+                Creating Success Stories Daily
+              </h3>
+              <p style={{
+                fontSize: '1.2rem',
+                lineHeight: '1.7',
+                color: 'var(--color-forest-green)',
+                opacity: '0.8',
+                marginBottom: '1.5rem'
+              }}>
+                Every child's journey is unique, and we're honored to be part of their growth story. Our evidence-based approaches combined with a nurturing environment create the perfect setting for meaningful progress.
+              </p>
+              <p style={{
+                fontSize: '1.1rem',
+                lineHeight: '1.6',
+                color: 'var(--color-sage)',
+                fontStyle: 'italic'
+              }}>
+                "The results speak for themselves - increased independence, improved communication, and most importantly, confident, happy children who are excited to learn and grow."
+              </p>
+            </div>
           </div>
           
           {/* Call to Action */}

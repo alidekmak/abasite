@@ -63,7 +63,7 @@ function Students() {
       {/* Opportunities Section */}
       <section style={{
         padding: '80px 0',
-        backgroundColor: 'var(--color-cream)',
+        backgroundColor: 'var(--color-white)',
         width: '100%'
       }}>
         <div className="container-content">

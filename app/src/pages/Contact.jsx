@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+import {
+  HiPhone,
+  HiEnvelope,
+  HiMapPin,
+  HiBuildingOffice2,
+  HiHome
+} from 'react-icons/hi2';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +16,8 @@ function Contact() {
     message: ''
   });
 
+  const [submitStatus, setSubmitStatus] = useState(''); // 'loading', 'success', 'error'
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -16,47 +25,76 @@ function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Connect to backend API
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
+    setSubmitStatus('loading');
+    
+    try {
+      // Using local backend server
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+        // Clear success message after 5 seconds
+        setTimeout(() => setSubmitStatus(''), 5000);
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setSubmitStatus('error');
+      // Clear error message after 5 seconds
+      setTimeout(() => setSubmitStatus(''), 5000);
+    }
   };
 
   const contactInfo = [
     {
-      icon: '📞',
+      icon: HiPhone,
       title: 'Phone',
-      details: ['+1 (234) 567-8900', 'Call for appointments or questions'],
-      action: 'tel:+12345678900'
+      details: ['313-429-9124', 'Call for appointments or questions'],
+      action: 'tel:+13134299124'
     },
     {
-      icon: '✉️',
+      icon: HiEnvelope,
       title: 'Email',
       details: ['info@nurturenestpc.com', 'We respond within 24 hours'],
       action: 'mailto:info@nurturenestpc.com'
     },
     {
-      icon: '📍',
+      icon: HiMapPin,
       title: 'Address',
       details: ['22005 Outer Drive', 'Dearborn, MI 48124'],
       action: null
     },
     {
-      icon: '🏢',
+      icon: HiBuildingOffice2,
       title: 'Office Hours',
       details: ['Mon-Fri: 8:00 AM - 4:30 PM', 'Sat-Sun: Closed'],
       action: null
     },
     {
-      icon: '🏠',
+      icon: HiHome,
       title: 'In-Home Hours',
       details: ['Mon-Fri: 8:00 AM - 8:00 PM', 'Sat: 8:00 AM - 4:00 PM', 'Sun: Closed'],
       action: null
@@ -106,7 +144,7 @@ function Contact() {
       {/* Contact Info Cards */}
       <section style={{
         padding: '80px 0',
-        backgroundColor: 'var(--color-cream)',
+        backgroundColor: 'white',
         width: '100%'
       }}>
         <div className="container-content">
@@ -130,9 +168,10 @@ function Contact() {
               >
                 <div style={{
                   fontSize: '3rem',
-                  marginBottom: '1rem'
+                  marginBottom: '1rem',
+                  color: 'var(--color-forest-green)'
                 }}>
-                  {info.icon}
+                  <info.icon size={48} />
                 </div>
                 <h3 style={{
                   color: 'var(--color-forest-green)',
@@ -396,20 +435,48 @@ function Contact() {
 
                 <button
                   type="submit"
+                  disabled={submitStatus === 'loading'}
                   style={{
                     padding: '1rem 2rem',
-                    backgroundColor: 'var(--color-sage)',
+                    backgroundColor: submitStatus === 'loading' ? '#ccc' : 'var(--color-sage)',
                     color: 'white',
                     border: 'none',
                     borderRadius: '8px',
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    cursor: 'pointer',
+                    cursor: submitStatus === 'loading' ? 'not-allowed' : 'pointer',
                     transition: 'background-color 0.3s ease'
                   }}
                 >
-                  Send Message
+                  {submitStatus === 'loading' ? 'Sending...' : 'Send Message'}
                 </button>
+
+                {/* Status Messages */}
+                {submitStatus === 'success' && (
+                  <div style={{
+                    padding: '1rem',
+                    backgroundColor: '#d4edda',
+                    color: '#155724',
+                    border: '1px solid #c3e6cb',
+                    borderRadius: '8px',
+                    textAlign: 'center'
+                  }}>
+                    ✅ Message sent successfully! We'll get back to you soon.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div style={{
+                    padding: '1rem',
+                    backgroundColor: '#f8d7da',
+                    color: '#721c24',
+                    border: '1px solid #f5c6cb',
+                    borderRadius: '8px',
+                    textAlign: 'center'
+                  }}>
+                    ❌ Failed to send message. Please try again or contact us directly.
+                  </div>
+                )}
               </form>
             </div>
 
@@ -423,6 +490,19 @@ function Contact() {
               }}>
                 Why Choose Nurture Nest?
               </h2>
+              
+              {/* Office/therapy space image */}
+              <div style={{
+                width: '100%',
+                height: '250px',
+                backgroundImage: 'url("/office/office3.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                borderRadius: '12px',
+                boxShadow: '0 6px 20px rgba(0,0,0,0.15)',
+                marginBottom: '2rem'
+              }}></div>
+              
               <p style={{
                 fontSize: '1.1rem',
                 marginBottom: '2rem',
@@ -434,10 +514,11 @@ function Contact() {
               </p>
 
               <div style={{
-                backgroundColor: 'var(--color-cream)',
+                backgroundColor: 'var(--color-white)',
                 padding: '2.5rem',
                 borderRadius: '12px',
-                marginBottom: '2rem'
+                marginBottom: '2rem',
+                boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
               }}>
                 <h3 style={{
                   color: 'var(--color-terracotta)',
@@ -496,7 +577,7 @@ function Contact() {
                   Schedule your free consultation today
                 </p>
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+13134299124"
                   style={{
                     display: 'inline-block',
                     padding: '1rem 2rem',
@@ -508,7 +589,7 @@ function Contact() {
                     fontSize: '1.1rem'
                   }}
                 >
-                  Call Now: +1 (234) 567-8900
+                  Call Now: 313-429-9124
                 </a>
               </div>
             </div>
@@ -519,7 +600,7 @@ function Contact() {
       {/* Hours and Location Section */}
       <section style={{
         padding: '60px 0',
-        backgroundColor: 'var(--color-cream)',
+        backgroundColor: 'white',
         width: '100%'
       }}>
         <div className="container-content">
