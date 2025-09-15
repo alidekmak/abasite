@@ -281,11 +281,15 @@ function About() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '2rem'
           }}>
-            {['Therapy Rooms', 'Play Areas', 'Sensory Room', 'Sensory Garden'].map((area, index) => {
-              // Special handling for therapy room photo
+            {['Family Lounge', 'Play Areas', 'Sensory Room', 'Classroom', 'Assessment Area'].map((area, index) => {
+              // Custom photo mapping for each area
               const getOfficeImage = (index) => {
-                if (index === 0) return '/office/office10.jpg'; // Therapy Rooms
-                return `/office/office${index + 1}.jpg`; // Others use index + 1
+                if (index === 0) return '/office/office6.jpg'; // Family Lounge
+                if (index === 1) return '/office/office4.jpg'; // Play Areas
+                if (index === 2) return '/office/office3.jpg'; // Sensory Room
+                if (index === 3) return '/office/office9.jpg'; // Classroom
+                if (index === 4) return '/office/office11.png'; // Assessment Area
+                return `/office/office${index + 1}.jpg`; // Fallback
               };
               
               return (

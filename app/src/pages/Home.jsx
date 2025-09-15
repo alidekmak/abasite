@@ -554,18 +554,18 @@ function Home() {
                 left: '50%',
                 transform: 'translateX(-50%)',
                 display: 'flex',
-                gap: '10px'
+                gap: '8px'
               }}>
                 {slideImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     style={{
-                      width: '12px',
-                      height: '12px',
+                      width: '6px',
+                      height: '6px',
                       borderRadius: '50%',
                       border: 'none',
-                      backgroundColor: index === currentSlide ? 'white' : 'rgba(255,255,255,0.5)',
+                      backgroundColor: index === currentSlide ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.3)',
                       cursor: 'pointer',
                       transition: 'backgroundColor 0.3s ease'
                     }}
@@ -581,21 +581,28 @@ function Home() {
                   left: '15px',
                   top: '50%',
                   transform: 'translateY(-50%)',
-                  backgroundColor: 'rgba(255,255,255,0.8)',
+                  backgroundColor: 'rgba(255,255,255,0.4)',
                   border: 'none',
                   borderRadius: '50%',
-                  width: '40px',
-                  height: '40px',
+                  width: '32px',
+                  height: '32px',
                   cursor: 'pointer',
-                  fontSize: '18px',
+                  fontSize: '14px',
                   color: 'var(--color-forest-green)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  transition: 'backgroundColor 0.3s ease'
+                  transition: 'backgroundColor 0.3s ease, opacity 0.3s ease',
+                  opacity: '0.7'
                 }}
-                onMouseOver={(e) => e.target.style.backgroundColor = 'white'}
-                onMouseOut={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.8)'}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = 'rgba(255,255,255,0.6)';
+                  e.target.style.opacity = '1';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = 'rgba(255,255,255,0.4)';
+                  e.target.style.opacity = '0.7';
+                }}
               >
                 ‹
               </button>
@@ -606,21 +613,28 @@ function Home() {
                   right: '15px',
                   top: '50%',
                   transform: 'translateY(-50%)',
-                  backgroundColor: 'rgba(255,255,255,0.8)',
+                  backgroundColor: 'rgba(255,255,255,0.4)',
                   border: 'none',
                   borderRadius: '50%',
-                  width: '40px',
-                  height: '40px',
+                  width: '32px',
+                  height: '32px',
                   cursor: 'pointer',
-                  fontSize: '18px',
+                  fontSize: '14px',
                   color: 'var(--color-forest-green)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  transition: 'backgroundColor 0.3s ease'
+                  transition: 'backgroundColor 0.3s ease, opacity 0.3s ease',
+                  opacity: '0.7'
                 }}
-                onMouseOver={(e) => e.target.style.backgroundColor = 'white'}
-                onMouseOut={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.8)'}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = 'rgba(255,255,255,0.6)';
+                  e.target.style.opacity = '1';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = 'rgba(255,255,255,0.4)';
+                  e.target.style.opacity = '0.7';
+                }}
               >
                 ›
               </button>
@@ -750,18 +764,18 @@ function Home() {
                     left: '50%',
                     transform: 'translateX(-50%)',
                     display: 'flex',
-                    gap: '8px'
+                    gap: '6px'
                   }}>
                     {officeImages.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentOfficeSlide(index)}
                         style={{
-                          width: '10px',
-                          height: '10px',
+                          width: '4px',
+                          height: '4px',
                           borderRadius: '50%',
                           border: 'none',
-                          backgroundColor: currentOfficeSlide === index ? 'white' : 'rgba(255,255,255,0.5)',
+                          backgroundColor: currentOfficeSlide === index ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.3)',
                           cursor: 'pointer',
                           transition: 'backgroundColor 0.3s ease'
                         }}
@@ -777,21 +791,28 @@ function Home() {
                       left: '10px',
                       top: '50%',
                       transform: 'translateY(-50%)',
-                      backgroundColor: 'rgba(255,255,255,0.8)',
+                      backgroundColor: 'rgba(255,255,255,0.4)',
                       border: 'none',
                       borderRadius: '50%',
-                      width: '32px',
-                      height: '32px',
+                      width: '24px',
+                      height: '24px',
                       cursor: 'pointer',
-                      fontSize: '14px',
+                      fontSize: '12px',
                       color: 'var(--color-forest-green)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      transition: 'background-color 0.3s ease'
+                      transition: 'background-color 0.3s ease, opacity 0.3s ease',
+                      opacity: '0.7'
                     }}
-                    onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,1)'}
-                    onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.8)'}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = 'rgba(255,255,255,0.6)';
+                      e.target.style.opacity = '1';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = 'rgba(255,255,255,0.4)';
+                      e.target.style.opacity = '0.7';
+                    }}
                   >
                     ‹
                   </button>
@@ -802,21 +823,28 @@ function Home() {
                       right: '10px',
                       top: '50%',
                       transform: 'translateY(-50%)',
-                      backgroundColor: 'rgba(255,255,255,0.8)',
+                      backgroundColor: 'rgba(255,255,255,0.4)',
                       border: 'none',
                       borderRadius: '50%',
-                      width: '32px',
-                      height: '32px',
+                      width: '24px',
+                      height: '24px',
                       cursor: 'pointer',
-                      fontSize: '14px',
+                      fontSize: '12px',
                       color: 'var(--color-forest-green)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      transition: 'background-color 0.3s ease'
+                      transition: 'background-color 0.3s ease, opacity 0.3s ease',
+                      opacity: '0.7'
                     }}
-                    onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,1)'}
-                    onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.8)'}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = 'rgba(255,255,255,0.6)';
+                      e.target.style.opacity = '1';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = 'rgba(255,255,255,0.4)';
+                      e.target.style.opacity = '0.7';
+                    }}
                   >
                     ›
                   </button>

@@ -30,8 +30,8 @@ function Contact() {
     setSubmitStatus('loading');
     
     try {
-      // Using local backend server
-      const response = await fetch('http://localhost:3001/api/contact', {
+      // Use relative path for API endpoint (works in both dev and production)
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
