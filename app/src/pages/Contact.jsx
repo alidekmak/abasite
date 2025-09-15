@@ -385,11 +385,8 @@ function Contact() {
                   >
                     <option value="">Select a service</option>
                     <option value="aba">ABA Therapy</option>
-                    <option value="speech">Speech Language Pathology</option>
                     <option value="speech-therapy">Speech Therapy</option>
                     <option value="occupational">Occupational Therapy</option>
-                    <option value="early-on">Early On</option>
-                    <option value="telehealth">Telehealth</option>
                     <option value="consultation">General Consultation</option>
                   </select>
                 </div>

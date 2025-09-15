@@ -5,24 +5,10 @@ function Career() {
   const openPositions = [
     {
       title: 'Board Certified Behavior Analyst (BCBA)',
-      type: 'Full-time',
+      type: 'Full-time/Part-time',
       location: 'In-clinic & In-home',
       description: 'Join our team as a BCBA to provide ABA therapy services and supervision to children with autism and developmental disabilities.',
       requirements: ['BCBA certification', '2+ years experience preferred', 'Valid driver\'s license', 'Passion for working with children']
-    },
-    {
-      title: 'Speech-Language Pathologist',
-      type: 'Full-time',
-      location: 'In-clinic',
-      description: 'Provide comprehensive speech and language therapy services to pediatric clients in our nature-inspired clinic.',
-      requirements: ['Master\'s degree in SLP', 'State licensure', 'Pediatric experience preferred', 'Strong communication skills']
-    },
-    {
-      title: 'Occupational Therapist',
-      type: 'Part-time',
-      location: 'In-clinic',
-      description: 'Help children develop essential life skills through engaging, play-based occupational therapy interventions.',
-      requirements: ['OT degree and licensure', 'Pediatric experience', 'Sensory integration training preferred', 'Creative approach to therapy']
     },
     {
       title: 'Registered Behavior Technician (RBT)',

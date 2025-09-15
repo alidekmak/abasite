@@ -572,18 +572,25 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.5rem !important;
   }
   
-  /* About page Visit Our Clinic section - keep grid but optimize for mobile */
+  /* About page Visit Our Clinic section - 2x2 grid on mobile with good proportions */
   .about-page section:nth-child(4) > div > div[style*="grid-template-columns"] {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 1rem !important;
   }
   
   .about-page section:nth-child(4) .container-content > div:last-child > div {
-    padding: 2rem !important;
+    padding: 1.5rem !important;
   }
   
   .about-page section:nth-child(4) h3 {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Ensure clinic images maintain good aspect ratio on mobile */
+  .about-page section:nth-child(4) > div > div > div > div[style*="height: 200px"] {
+    height: 150px !important;
+    min-height: 150px !important;
   }
 
   /* Section spacing for small screens */

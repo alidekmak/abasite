@@ -13,7 +13,20 @@ function Home() {
     '/thekids/thekids9.jpg'
   ];
 
+  const officeImages = [
+    '/office/office2.jpg',
+    '/office/office3.jpg',
+    '/office/office4.jpg',
+    '/office/office5.jpg',
+    '/office/office6.jpg',
+    '/office/office7.jpg',
+    '/office/office8.jpg',
+    '/office/office9.jpg',
+    '/office/office10.jpg'
+  ];
+
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentOfficeSlide, setCurrentOfficeSlide] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -22,6 +35,14 @@ function Home() {
 
     return () => clearInterval(timer);
   }, [slideImages.length]);
+
+  useEffect(() => {
+    const officeTimer = setInterval(() => {
+      setCurrentOfficeSlide((prev) => (prev + 1) % officeImages.length);
+    }, 4000); // Change office slide every 4 seconds
+
+    return () => clearInterval(officeTimer);
+  }, [officeImages.length]);
 
   const services = [
     { 
@@ -425,7 +446,7 @@ function Home() {
                 color: 'var(--color-forest-green)',
                 fontWeight: '600'
               }}>
-                A Nature-Inspired Environment
+                A Nurturing Environment
               </h3>
               <p style={{
                 fontSize: '1.1rem',
@@ -703,18 +724,103 @@ function Home() {
                 display: 'flex',
                 justifyContent: 'center'
               }}>
-                <img 
-                  src="/office/office9.jpg" 
-                  alt="Our clinic interior"
-                  style={{
-                    width: '100%',
-                    maxWidth: '320px',
-                    height: '220px',
-                    objectFit: 'cover',
-                    borderRadius: '12px',
-                    boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
-                  }}
-                />
+                <div style={{
+                  width: '100%',
+                  maxWidth: '320px',
+                  height: '220px',
+                  borderRadius: '12px',
+                  boxShadow: '0 6px 20px rgba(0,0,0,0.15)',
+                  overflow: 'hidden',
+                  position: 'relative'
+                }}>
+                  <img 
+                    src={officeImages[currentOfficeSlide]} 
+                    alt={`Our clinic interior ${currentOfficeSlide + 1}`}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      transition: 'opacity 0.5s ease-in-out'
+                    }}
+                  />
+                  {/* Slideshow indicator dots */}
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '15px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    display: 'flex',
+                    gap: '8px'
+                  }}>
+                    {officeImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentOfficeSlide(index)}
+                        style={{
+                          width: '10px',
+                          height: '10px',
+                          borderRadius: '50%',
+                          border: 'none',
+                          backgroundColor: currentOfficeSlide === index ? 'white' : 'rgba(255,255,255,0.5)',
+                          cursor: 'pointer',
+                          transition: 'backgroundColor 0.3s ease'
+                        }}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Navigation Arrows */}
+                  <button
+                    onClick={() => setCurrentOfficeSlide((prev) => (prev - 1 + officeImages.length) % officeImages.length)}
+                    style={{
+                      position: 'absolute',
+                      left: '10px',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      backgroundColor: 'rgba(255,255,255,0.8)',
+                      border: 'none',
+                      borderRadius: '50%',
+                      width: '32px',
+                      height: '32px',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      color: 'var(--color-forest-green)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      transition: 'background-color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,1)'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.8)'}
+                  >
+                    ‹
+                  </button>
+                  <button
+                    onClick={() => setCurrentOfficeSlide((prev) => (prev + 1) % officeImages.length)}
+                    style={{
+                      position: 'absolute',
+                      right: '10px',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      backgroundColor: 'rgba(255,255,255,0.8)',
+                      border: 'none',
+                      borderRadius: '50%',
+                      width: '32px',
+                      height: '32px',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      color: 'var(--color-forest-green)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      transition: 'background-color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,1)'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.8)'}
+                  >
+                    ›
+                  </button>
+                </div>
               </div>
               <p style={{
                 marginBottom: '1rem',

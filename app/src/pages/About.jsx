@@ -281,7 +281,14 @@ function About() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '2rem'
           }}>
-            {['Therapy Rooms', 'Play Areas', 'Family Lounge', 'Sensory Garden'].map((area, index) => (
+            {['Therapy Rooms', 'Play Areas', 'Sensory Room', 'Sensory Garden'].map((area, index) => {
+              // Special handling for therapy room photo
+              const getOfficeImage = (index) => {
+                if (index === 0) return '/office/office10.jpg'; // Therapy Rooms
+                return `/office/office${index + 1}.jpg`; // Others use index + 1
+              };
+              
+              return (
               <div key={index} style={{
                 backgroundColor: 'white',
                 padding: '3rem',
@@ -292,7 +299,7 @@ function About() {
                 <div style={{
                   width: '100%',
                   height: '200px',
-                  backgroundImage: `url("/office/office${index + 1}.jpg")`,
+                  backgroundImage: `url("${getOfficeImage(index)}")`,
                   backgroundColor: 'transparent',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
@@ -313,7 +320,8 @@ function About() {
                   {area}
                 </h3>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
