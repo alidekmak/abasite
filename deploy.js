@@ -41,6 +41,10 @@ function deployWithScp() {
   // Copy files using scp
   const scpCommand = `scp -r ${config.buildDir}/* ${config.server}:${config.remotePath}/`;
   execSync(scpCommand, { stdio: 'inherit' });
+  
+  // Fix permissions after deployment
+  console.log('🔧 Fixing file permissions...');
+  execSync(`ssh ${config.server} "chown -R www-data:www-data ${config.remotePath} && chmod -R 755 ${config.remotePath}"`, { stdio: 'inherit' });
 }
 
 // Fallback for Windows or systems without rsync/scp
@@ -69,6 +73,10 @@ try {
     console.log('📤 Deploying with rsync...');
     const rsyncCommand = `rsync -avz ${config.buildDir}/ ${config.server}:${config.remotePath}`;
     execSync(rsyncCommand, { stdio: 'inherit' });
+    
+    // Fix permissions after deployment
+    console.log('🔧 Fixing file permissions...');
+    execSync(`ssh ${config.server} "chown -R www-data:www-data ${config.remotePath} && chmod -R 755 ${config.remotePath}"`, { stdio: 'inherit' });
   } else {
     // Try scp as fallback
     try {
