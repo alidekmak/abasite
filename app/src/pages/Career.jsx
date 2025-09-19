@@ -311,7 +311,7 @@ function Career() {
               }}>
                 Apply Now
               </Link>
-              <a href="mailto:careers@nurturenestpc.com" className="btn" style={{
+              <a href="mailto:info@nurturenestpc.com" className="btn" style={{
                 padding: '1rem 2rem',
                 fontSize: '1.1rem',
                 backgroundColor: 'var(--color-terracotta)',
