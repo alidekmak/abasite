@@ -21,8 +21,8 @@ function About() {
       icon: HiChartBar
     },
     {
-      title: 'Nature-Inspired Environment',
-      description: 'We believe healing happens best in spaces that feel natural, calming, and connected to the earth.',
+      title: 'Nurturing Environment',
+      description: 'We believe learning happens best in spaces that feel natural, calming, and connected to the earth.',
       icon: HiSparkles
     },
     {
@@ -86,7 +86,7 @@ function About() {
             color: 'white',
             fontWeight: '700'
           }}>
-            About Nurture Nest
+            About NurtureNest
           </h1>
           <p style={{
             fontSize: '1.3rem', 
@@ -137,7 +137,7 @@ function About() {
                 color: 'var(--color-forest-green)',
                 opacity: '0.8'
               }}>
-                Since opening our doors, we've had the privilege of supporting hundreds of families on their unique journeys. Every child who walks through our doors teaches us something new about resilience, potential, and the power of individualized care.
+                Since opening our doors, we've had the privilege of supporting families on their unique journeys. Every child who walks through our doors teaches us something new about resilience, potential, and the power of individualized care.
               </p>
             </div>
             <div>
@@ -173,7 +173,7 @@ function About() {
                   color: 'var(--color-forest-green)',
                   fontStyle: 'italic'
                 }}>
-                  "To nurture each child's growth through compassionate, evidence-based pediatric therapy in a nature-inspired environment where families feel supported and children feel empowered to reach their full potential."
+                  "To nurture each child's growth through compassionate, evidence-based pediatric therapy in a nurturing environment where families feel supported and children feel empowered to reach their full potential."
                 </p>
               </div>
             </div>
@@ -281,7 +281,7 @@ function About() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '2rem'
           }}>
-            {['Family Lounge', 'Play Areas', 'Sensory Room', 'Classroom', 'Assessment Area'].map((area, index) => {
+            {['Family Lounge', 'Play Areas', 'Sensory Room', 'Classroom', 'Assessment Area', 'Therapy Rooms'].map((area, index) => {
               // Custom photo mapping for each area
               const getOfficeImage = (index) => {
                 if (index === 0) return '/office/office6.jpg'; // Family Lounge
@@ -289,6 +289,7 @@ function About() {
                 if (index === 2) return '/office/office3.jpg'; // Sensory Room
                 if (index === 3) return '/office/office9.jpg'; // Classroom
                 if (index === 4) return '/office/office11.png'; // Assessment Area
+                if (index === 5) return '/Therapyroom.jpg'; // Therapy Rooms
                 return `/office/office${index + 1}.jpg`; // Fallback
               };
               

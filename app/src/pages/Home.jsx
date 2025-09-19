@@ -673,7 +673,7 @@ function Home() {
                 marginBottom: '1.5rem',
                 color: 'var(--color-forest-green)'
               }}>
-                Why Choose Nurture Nest?
+                Why Choose NurtureNest?
               </h2>
               <div style={{ marginBottom: '2rem' }}>
                 <h3 style={{

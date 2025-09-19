@@ -59,7 +59,7 @@ function Footer() {
           textAlign: 'center',
           color: '#F7F3E9'
         }}>
-          <p>&copy; 2025 Nurture Nest Pediatric Therapy. All rights reserved.</p>
+          <p>&copy; 2025 NurtureNest Pediatric Therapy. All rights reserved.</p>
         </div>
       </div>
     </footer>

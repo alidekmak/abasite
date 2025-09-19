@@ -485,7 +485,7 @@ function Contact() {
                 color: 'var(--color-forest-green)',
                 fontWeight: '600'
               }}>
-                Why Choose Nurture Nest?
+                Why Choose NurtureNest?
               </h2>
               
               {/* Office/therapy space image */}

@@ -90,7 +90,7 @@ function Career() {
                 opacity: '0.8',
                 marginBottom: '2rem'
               }}>
-                At Nurture Nest, we believe that great therapy starts with great therapists. We're committed to creating an environment where our team can thrive professionally while making a real difference in children's lives.
+                At NurtureNest, we believe that great therapy starts with great therapists. We're committed to creating an environment where our team can thrive professionally while making a real difference in children's lives.
               </p>
               
               {/* Team Photo */}
