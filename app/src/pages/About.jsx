@@ -289,7 +289,7 @@ function About() {
                 if (index === 2) return '/office/office3.jpg'; // Sensory Room
                 if (index === 3) return '/office/office9.jpg'; // Classroom
                 if (index === 4) return '/office/office11.png'; // Assessment Area
-                if (index === 5) return '/Therapyroom.jpg'; // Therapy Rooms
+                if (index === 5) return '/office/office10.jpg'; // Therapy Rooms
                 return `/office/office${index + 1}.jpg`; // Fallback
               };
               
