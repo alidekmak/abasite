@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { HiUserGroup } from 'react-icons/hi2';
+import { usePageMeta } from '../usePageMeta';
+
 
 function Home() {
+  usePageMeta({
+    title: 'ABA Therapy In Dearborn, MI | Play Based | NurtureNest',
+    description:
+      'NurtureNest Pediatric Therapy provides compassionate play-based ABA therapy and parent support in Dearborn, MI to help children build skills and confidence.'
+  });
+
   const slideImages = [
     '/thekids/thekids1.jpg',
     '/thekids/thekids2.jpg',
@@ -12,6 +20,7 @@ function Home() {
     '/thekids/thekids7.jpg',
     '/thekids/thekids9.jpg'
   ];
+
 
   const officeImages = [
     '/office/office2.jpg',
