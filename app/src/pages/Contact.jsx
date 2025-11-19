@@ -6,8 +6,14 @@ import {
   HiBuildingOffice2,
   HiHome
 } from 'react-icons/hi2';
+import { usePageMeta } from '../usePageMeta';
 
 function Contact() {
+  usePageMeta({
+    title: 'Contact NurtureNest Pediatric Therapy | Schedule A Consultation',
+    description:
+      'Contact NurtureNest Pediatric Therapy in Dearborn, MI to ask questions, verify insurance, or schedule an ABA therapy consultation for your child.'
+  });
   const contactInfo = [
     {
       icon: HiPhone,
