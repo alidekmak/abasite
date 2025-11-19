@@ -379,7 +379,7 @@ function Home() {
               margin: '0 auto',
               opacity: '0.8'
             }}>
-              Specialized therapy services designed to meet each child's unique needs and developmental goals
+              We offer personalized, play-based ABA therapy that meets your child where they are and supports their individual developmental goals.
             </p>
           </div>
           <div className="services-grid" style={{
