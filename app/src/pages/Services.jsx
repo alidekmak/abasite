@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { usePageMeta } from '../usePageMeta';
 
 function Services() {
+  usePageMeta({
+    title: 'ABA Therapy Services In Dearborn, MI | NurtureNest Pediatric Therapy',
+    description:
+      'Learn about our center-based and in-home ABA therapy services, plus parent training, for children in Dearborn and nearby communities.'
+  });
   const services = [
     {
       name: 'Center Based ABA Services',
