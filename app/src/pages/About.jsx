@@ -11,7 +11,7 @@ import { usePageMeta } from '../usePageMeta';
 
 function About() {
   usePageMeta({
-    title: 'About NurtureNest Pediatric Therapy | Our Mission & Team',
+    title: 'About Us | NurtureNest Pediatric Therapy',
     description:
       'Discover NurtureNest Pediatric Therapy’s mission, values, and clinical team supporting children with autism and their families in Dearborn, MI.'
   });
