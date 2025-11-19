@@ -47,7 +47,7 @@ function Footer() {
           
           <div>
             <h4 style={{color: '#F5B895', marginBottom: '1rem'}}>Contact Info</h4>
-            <p>Phone: 313-429-9124</p>
+            <p>Phone: <a href="tel:+13134299124">313-429-9124</a></p>
             <p>Email: info@nurturenestpc.com</p>
             <p>Address: 22005 Outer Drive<br />Dearborn, MI 48124</p>
           </div>
@@ -59,7 +59,7 @@ function Footer() {
           textAlign: 'center',
           color: '#F7F3E9'
         }}>
-          <p>&copy; 2025 NurtureNest Pediatric Therapy. All rights reserved.</p>
+          <p>&copy; 2025 NurtureNest Pediatric Therapy. All rights reserved. Marketing & SEO by: <a href="https://www.amplifiedinternetmarketing.com/">Amplify Digital Marketing, LLC</a>.</p>
         </div>
       </div>
     </footer>
