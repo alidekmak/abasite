@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { usePageMeta } from '../usePageMeta';
 
 function Career() {
+  usePageMeta({
+    title: 'Careers In ABA Therapy | NurtureNest Pediatric Therapy',
+    description:
+      'Explore ABA therapist and support roles at NurtureNest Pediatric Therapy and join our team serving children and families.'
+  });
   const openPositions = [
     {
       title: 'Board Certified Behavior Analyst (BCBA)',
