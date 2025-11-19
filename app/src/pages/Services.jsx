@@ -4,7 +4,7 @@ import { usePageMeta } from '../usePageMeta';
 
 function Services() {
   usePageMeta({
-    title: 'ABA Therapy Services In Dearborn, MI | NurtureNest Pediatric Therapy',
+    title: 'Dearborn ABA Therapy | Center Based & In-Home | NurtureNest',
     description:
       'Learn about our center-based and in-home ABA therapy services, plus parent training, for children in Dearborn and nearby communities.'
   });
