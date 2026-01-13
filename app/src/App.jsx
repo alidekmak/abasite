@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import DearbornHeights from './pages/DearbornHeights';
 import AllenPark from "./pages/AllenPark";
 import Taylor from "./pages/Taylor";
+import GardenCity from "./pages/GardenCity";
 import './styles/global.css';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             <Route path="/aba-therapy-in-dearborn-heights-mi" element={<DearbornHeights />} />
             <Route path="/aba-therapy-in-allen-park-mi" element={<AllenPark />} />
             <Route path="/aba-therapy-in-taylor-mi" element={<Taylor />} />
+            <Route path="/aba-therapy-in-garden-city-mi" element={<GardenCity />} />
           </Routes>
         </main>
         <Footer />
