@@ -9,15 +9,15 @@ function GardenCity() {
       "Play Based ABA Therapy, in-home and center-based ABA services, plus parent training for families in Garden City, MI."
   });
 
-  // Different images than other location pages to avoid repetition
+  // Updated images to avoid repetition
   const pageImages = [
     {
       src: "/thekids/thekids2.jpg",
       alt: "ABA Therapy In Garden City MI Using Play Based ABA Therapy"
     },
     {
-      src: "/thekids/thekids6.jpg",
-      alt: "Autism Therapy In Garden City MI With In Home And Center Based ABA Services"
+      src: "/thekids/thekids8.jpg",
+      alt: "Autism Therapy In Garden City MI With Supportive ABA Services"
     }
   ];
 
