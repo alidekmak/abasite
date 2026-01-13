@@ -10,6 +10,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import DearbornHeights from './pages/DearbornHeights';
 import AllenPark from "./pages/AllenPark";
+import Taylor from "./pages/Taylor";
 import './styles/global.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/aba-therapy-in-dearborn-heights-mi" element={<DearbornHeights />} />
             <Route path="/aba-therapy-in-allen-park-mi" element={<AllenPark />} />
+            <Route path="/aba-therapy-in-taylor-mi" element={<Taylor />} />
           </Routes>
         </main>
         <Footer />
