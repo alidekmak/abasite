@@ -3,13 +3,44 @@ import { Link } from 'react-router-dom';
 import { HiUserGroup } from 'react-icons/hi2';
 import { usePageMeta } from '../usePageMeta';
 
-
 function Home() {
   usePageMeta({
     title: 'ABA Therapy In Dearborn, MI | Play Based | NurtureNest',
     description:
       'NurtureNest Pediatric Therapy provides compassionate play-based ABA therapy and parent support in Dearborn, MI to help children build skills and confidence.'
   });
+
+  // LocalBusiness Schema (Homepage Only)
+  // NOTE: Update the domain below if needed.
+  const localSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": "https://www.nurturenest-therapy.com/#medicalbusiness",
+    "name": "NurtureNest Pediatric Therapy",
+    "url": "https://www.nurturenest-therapy.com/",
+    "telephone": "+1-313-429-9124",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "22005 Outer Drive",
+      "addressLocality": "Dearborn",
+      "addressRegion": "MI",
+      "postalCode": "48124",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Wayne County, MI"
+    },
+    "medicalSpecialty": ["Behavioral Therapy", "Pediatric Therapy"],
+    "knowsAbout": [
+      "Applied Behavior Analysis",
+      "ABA Therapy",
+      "Play Based ABA Therapy",
+      "Parent Training",
+      "In-Home ABA Therapy",
+      "Center Based ABA Therapy"
+    ]
+  };
 
   const slideImages = [
     '/thekids/thekids1.jpg',
@@ -20,7 +51,6 @@ function Home() {
     '/thekids/thekids7.jpg',
     '/thekids/thekids9.jpg'
   ];
-
 
   const officeImages = [
     '/office/office2.jpg',
@@ -116,6 +146,13 @@ function Home() {
           }
         `}
       </style>
+
+      {/* LocalBusiness Schema (Homepage Only) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="hero" style={{
         background: 'linear-gradient(135deg, var(--color-sage) 0%, var(--color-forest-green) 100%)',
