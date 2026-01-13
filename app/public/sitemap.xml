@@ -15,22 +15,29 @@
   <url>
     <loc>https://nurturenest-therapy.com/about</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://nurturenest-therapy.com/career</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://nurturenest-therapy.com/contact</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+  
   <url>
     <loc>https://www.nurturenest-therapy.com/aba-therapy-in-dearborn-heights-mi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+   <url>
+    <loc>https://www.nurturenest-therapy.com/aba-therapy-in-allen-park-mi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
