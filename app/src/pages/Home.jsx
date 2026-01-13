@@ -334,7 +334,7 @@ function Home() {
               textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)',
               fontWeight: '300'
             }}>
-              Evidence-based pediatric therapy in a warm, supportive environment where children thrive and families feel empowered on their journey to growth and development.
+              Evidence-based ABA therapy in Dearborn in a warm, supportive environment where children thrive and families feel empowered on their journey to growth and development.
             </p>
             <div className="hero-buttons" style={{ 
               display: 'flex', 
@@ -388,7 +388,7 @@ function Home() {
               margin: '0 auto',
               opacity: '0.8'
             }}>
-              We offer personalized, play-based ABA therapy that meets your child where they are and supports their individual developmental goals.
+              We offer personalized, play-based ABA therapy in Dearborn, MI that meets your child where they are and supports their individual developmental goals.
             </p>
           </div>
           <div className="services-grid" style={{
@@ -463,7 +463,7 @@ function Home() {
                 color: 'var(--color-forest-green)',
                 opacity: '0.8'
               }}>
-                Our clinic is thoughtfully designed to create a calming, welcoming space where children feel comfortable and ready to learn. Every detail reflects our commitment to providing therapy that feels natural and nurturing.
+                Our aba therapy clinic is based in Dearborn and thoughtfully designed to create a calming, welcoming space where children feel comfortable and ready to learn. Every detail reflects our commitment to providing therapy that feels natural and nurturing.
               </p>
             </div>
             <div style={{
@@ -520,7 +520,7 @@ function Home() {
                 marginBottom: '2rem',
                 opacity: '0.95'
               }}>
-                At NurtureNest, our mission is to empower children and their families by providing 
+                At NurtureNest in Dearborn, MI, our mission is to empower children and their families by providing 
                 individualized, evidence-based therapy in a nurturing and supportive environment. 
                 We are committed to helping each child build meaningful skills in communication, 
                 behavior, social interaction, and daily living through therapy services and proven approaches.
@@ -547,7 +547,7 @@ function Home() {
             }}>
               <img 
                 src={slideImages[currentSlide]} 
-                alt={`Children at therapy ${currentSlide + 1}`}
+                alt={`ABA Therapy in Dearborn, MI ${currentSlide + 1}`}
                 style={{
                   width: '100%',
                   height: '100%',
@@ -718,7 +718,7 @@ function Home() {
                   <HiUserGroup size={24} /> Family Partnership
                 </h3>
                 <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
-                  We support families as vital partners in the journey toward lifelong growth and success, promoting independence and meaningful progress at home.
+                  We support families in Dearborn and surrounding communities as active partners, helping children build independence and make meaningful progress at home.
                 </p>
               </div>
               <Link to="/about" className="btn btn-primary" style={{
@@ -758,7 +758,7 @@ function Home() {
                 }}>
                   <img 
                     src={officeImages[currentOfficeSlide]} 
-                    alt={`Our clinic interior ${currentOfficeSlide + 1}`}
+                    alt={`Autism Therapy in Dearborn ${currentOfficeSlide + 1}`}
                     style={{
                       width: '100%',
                       height: '100%',
