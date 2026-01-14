@@ -59,7 +59,7 @@ function Footer() {
           textAlign: 'center',
           color: '#F7F3E9'
         }}>
-          <p>&copy; 2026 NurtureNest Pediatric Therapy. All rights reserved. Marketing & SEO by: <a href="https://www.amplifiedinternetmarketing.com/">Amplify Digital Marketing, LLC</a>.</p>
+          <p>&copy; {new Date().getFullYear()} NurtureNest Pediatric Therapy. All rights reserved. Marketing & SEO by: <a href="https://www.amplifiedinternetmarketing.com/">Amplify Digital Marketing, LLC</a>.</p>
         </div>
       </div>
     </footer>
