@@ -247,17 +247,18 @@ function Contact() {
                 padding: '2rem',
                 boxShadow: '0 6px 20px rgba(0,0,0,0.1)',
                 border: '1px solid rgba(156, 175, 136, 0.2)',
-                height: '600px',
                 marginBottom: '2rem'
               }}>
                 <iframe 
                   src="https://tally.so/r/mVgvva"
-                  width="100%" 
-                  height="100%"
+                  width="100%"
                   frameBorder="0"
                   style={{
+                    minHeight: '700px',
                     borderRadius: '8px',
-                    border: 'none'
+                    border: 'none',
+                    width: '100%',
+                    display: 'block'
                   }}
                   title="Contact Form"
                 >
